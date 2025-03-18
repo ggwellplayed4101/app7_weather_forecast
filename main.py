@@ -36,4 +36,4 @@ if place:
         st.image(image_paths, width=130)
     
     except KeyError:
-        st.write("Please enter a valid place.")
+        st.write("Please enter a valid place!")
