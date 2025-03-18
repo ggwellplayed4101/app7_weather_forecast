@@ -8,7 +8,10 @@ def get_data(place, forecast_days=None):
     response = requests.get(url)
     print (response)
     data =  response.json()
-    filtered_data = data["list"][:8*forecast_days]
+    try:
+        filtered_data = data["list"][:8*forecast_days]
+    except KeyError:
+        print("Please enter a valid place.")
     
     return filtered_data
 
